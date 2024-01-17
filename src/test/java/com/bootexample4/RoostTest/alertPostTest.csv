@@ -1,0 +1,12 @@
+sn,cameraId,timestamp,confidence,alert,subAlert,photoUrl,videoUrl,statusCode
+B7A822C76A,0fdae914-0f3c-464c-85da-2287dfb2fe43,2023-07-01T10:19:50.496Z,0.64,intrusion,vehicle,https://example.com/f53f3480c59a424d983f62ced5857f85.jpg,https://example.com/d75ac51a87cc4fbd92540790397ec754.mp4,400
+E7E0767056,c95f5e04-3b20-4b0b-a8fa-ca5c51416611,2022-08-18T10:20:59.233Z,0.46,loitering,package,https://example.com/a646363291e6451cafadd036e5270828.jpg,https://example.com/7996ba8ea5e445dfb3673145880c2612.mp4,400
+9F2C533B4E,10b5f9db-a973-43b8-9463-39c7b7c86b99,2020-12-03T17:35:07.357Z,0.82,vehicle_stopping,vehicle,https://example.com/42e06958c8df4a8b9de8b5e68bb8f6a2.jpg,https://example.com/42074f3ad23d417e9b8d2391e89129ae.mp4,201
+6B809EE170,f9cdd60f-f2fe-47bd-b326-eddfdde835a4,2022-09-22T10:18:47.126Z,0.87,unattended_object,vehicle,https://example.com/9138ea199f474125a1a020f12ea3ffd0.jpg,https://example.com/9c0124d866864cf4872ae41230cac3f4.mp4,400
+E56D2FDCA0,e7d371b6-fabd-477f-b60c-ad179b7844bb,2023-08-27T22:18:59.179Z,0.72,intrusion,person,https://example.com/aafebee493f246b9b29a6854f9219f52.jpg,https://example.com/cb17b399d62c4903a02060eaef538ec3.mp4,201
+85FD7BC08A,8c0d3963-a956-47cc-b2f3-34290fc75cac,2021-03-06T02:38:30.253Z,0.97,vehicle_stopping,vehicle,https://example.com/89dc5093e4c74af5a67805f3dcea17af.jpg,https://example.com/6e3aebf2e24444618677a239336511a8.mp4,201
+6D8C02FFE4,e409688e-75da-475a-9eb5-9ea9d61c563c,2023-01-15T12:26:59.800Z,0.93,loitering,vehicle,https://example.com/b3ea9a66d06f4cec862319911494d4a6.jpg,https://example.com/87b1f58c204345d2b9f7acc540317b3e.mp4,400
+D9795193DC,d171e8e5-f51a-457f-b5d5-f7f37c843245,2021-08-16T05:47:36.490Z,0.65,loitering,package,https://example.com/04bb0f63e18d4cd78e7346080c094fa8.jpg,https://example.com/ce2cef54393347c6a8c0e18060d4800f.mp4,201
+DF02F3DBDE,77ae5e8d-59dd-4173-a468-b683419e29b4,2021-04-25T08:59:19.474Z,0.45,unattended_object,vehicle,https://example.com/af42647e22ae406da460fcfde6f0936e.jpg,https://example.com/e4725fed007d4a41a51fb8f8ac500f19.mp4,400
+677566E781,b9b92391-9018-49e3-a028-e84a356bf880,2023-03-04T20:55:19.985Z,0.71,intrusion,animal,https://example.com/a4a78d3268d14c9a9d2d207e4b4ec7ca.jpg,https://example.com/338169ae384f4248915dcbd3c6ef50c5.mp4,201
+
