@@ -1,0 +1,11 @@
+id,tradeName,phone,email,statusCode
+3e25d556-77c9-4f57-833f-58f37b7d4f42,TradeName1,1234567890,tradename1@example.com,200
+e2f8b3f9-93e7-4661-854a-505e39b0749c,TradeName2,2345678901,tradename2@example.com,400
+7c6d14b3-c9b6-4d19-82a1-2c5a2a8b8787,TradeName3,3456789012,tradename3@example.com,401
+1c0a5c35-5d75-4f67-8fd7-9dc178890e8b,TradeName4,4567890123,tradename4@example.com,200
+7a4d5b27-f0ae-4f0f-8c7c-5c4a44767e2b,TradeName5,5678901234,tradename5@example.com,400
+3c2d4b37-e1be-4f1f-9c8c-6c5a55767f2c,TradeName6,6789012345,tradename6@example.com,401
+2b1a5c47-d2cf-4f2f-ac9c-7d6a66780f2d,TradeName7,7890123456,tradename7@example.com,200
+5a2d4b57-c3de-4f3f-bc9d-8d7a77781f3e,TradeName8,8901234567,tradename8@example.com,400
+4b3a5c67-e4ef-4f4f-cc9e-9e8a88882f4f,TradeName9,9012345678,tradename9@example.com,401
+6b4a5d77-f5f0-4f5f-dc9f-af9b99983f5g,TradeName10,0123456789,tradename10@example.com,200

@@ -1,0 +1,11 @@
+initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+JTK,John,Thomas,Kennedy,1980-07-15,New York,2125550198,john.kennedy@test.com,10021,45,,US,REF123456,201
+RMB,Robert,Martin,Brown,1972-12-05,Chicago,3125550191,robert.brown@test.com,60607,100,A,US,REF654321,201
+AMJ,Alice,Mary,Johnson,1985-02-20,Los Angeles,2135550193,alice.johnson@test.com,90001,200,B,US,REF987654,201
+DJS,David,James,Smith,1975-11-12,Houston,7135550197,david.smith@test.com,77002,300,C,US,REF456789,201
+MJA,Michael,Joseph,Anderson,1988-03-27,Philadelphia,2155550192,michael.anderson@test.com,19103,400,D,US,REF321654,201
+LKW,Linda,Karen,Williams,1982-04-15,Phoenix,6025550195,linda.williams@test.com,85001,500,E,US,REF852963,201
+SJD,Susan,Jennifer,Davis,1978-05-22,San Antonio,2105550196,susan.davis@test.com,78205,600,F,US,REF741852,201
+PMA,Patricia,Michelle,Adams,1979-06-30,San Diego,6195550199,patricia.adams@test.com,92101,700,G,US,REF963258,201
+RLM,Richard,Lee,Miller,1981-08-05,Dallas,2145550190,richard.miller@test.com,75201,800,H,US,REF159357,201
+CJW,Charles,Joseph,Wright,1983-09-10,San Jose,4085550194,charles.wright@test.com,95113,900,I,US,REF753951,201

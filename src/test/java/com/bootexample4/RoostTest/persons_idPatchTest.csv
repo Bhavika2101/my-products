@@ -1,0 +1,11 @@
+id,initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+4b22c3be-b063-4b33-8f56-1366d8a46e1b,AB,John,Michael,Smith,1980-02-15,New York,1234567890,johnsmith@gmail.com,10001,42,A,US,Ref001,200
+5b33c3be-c063-2b44-8f56-1366d8a46e1b,BC,Emma,Olivia,Johnson,1990-05-20,Los Angeles,0987654321,emmajohnson@gmail.com,90001,24,B,US,Ref002,200
+6c44c3be-d063-1c55-8f56-1366d8a46e1b,CD,James,William,Brown,1975-10-10,Chicago,1122334455,jamesbrown@gmail.com,60601,66,C,US,Ref003,200
+7d55c3be-e063-3d66-8f56-1366d8a46e1b,DE,Emily,Isabella,Miller,1985-07-30,San Francisco,2233445566,emilymiller@gmail.com,94101,88,D,US,Ref004,200
+8e66c3be-f063-4e77-8f56-1366d8a46e1b,EF,Michael,Alexander,Garcia,1970-12-25,Houston,3344556677,michaelgarcia@gmail.com,77001,110,E,US,Ref005,200
+9f77c3be-g063-5f88-8f56-1366d8a46e1b,FG,Jessica,Sophia,Davis,1995-03-05,Phoenix,4455667788,jessicadavis@gmail.com,85001,132,F,US,Ref006,200
+10g88c3be-h063-6g99-8f56-1366d8a46e1b,GH,Joshua,Matthew,Rodriguez,1987-08-15,Philadelphia,5566778899,joshuarodriguez@gmail.com,19101,154,G,US,Ref007,200
+11h99c3be-i063-7h10-8f56-1366d8a46e1b,HI,Ava,Mia,Martinez,1993-04-20,San Diego,6677889900,avamartinez@gmail.com,92101,176,H,US,Ref008,200
+12i10c3be-j063-8i11-8f56-1366d8a46e1b,IJ,Christopher,Joseph,Anderson,1972-09-30,Dallas,7788990011,christopheranderson@gmail.com,75201,198,I,US,Ref009,200
+13j11c3be-k063-9j12-8f56-1366d8a46e1b,JK,Sarah,Grace,Thomas,1988-06-10,San Jose,8899001122,sarahthomas@gmail.com,95101,220,J,US,Ref010,200
