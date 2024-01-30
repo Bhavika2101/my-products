@@ -1,4 +1,5 @@
 package com.bootexample4.RoostTest;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,89 +13,96 @@ import java.util.Arrays;
 
 public class Dataloader {
 
-      public Map<String, String> myHashMap = new HashMap<>();
+  public Map<String, String> myHashMap = new HashMap<>();
 
-      public String loadFromEnvVariables(String name) {
-        return System.getenv(name);
+  public String loadFromEnvVariables(String name) {
+    return System.getenv(name);
+  }
+
+  public String loadFromPropertiesFile(String name) {
+    Properties properties = new Properties();
+
+    try (InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties")) {
+      if (input == null) {
+        System.out.println("Sorry, unable to find application.properties");
+        return null;
       }
+      properties.load(input);
+      return properties.getProperty(name);
+    } catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
 
-      public String loadFromPropertiesFile(String name) {
-        Properties properties = new Properties();
+  public List<Map<String, String>> loadFromCSVFile(String filePath) {
+    List<Map<String, String>> data = loadCSV(filePath);
+    return data;
+  }
 
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties")) {
-          if (input == null) {
-            System.out.println("Sorry, unable to find application.properties");
-            return null;
-          }
-          properties.load(input);
-          return properties.getProperty(name);
-        } catch (IOException e) {
-          e.printStackTrace();
-          return null;
-        }
-      }
+  public static List<Map<String, String>> loadCSV(String filePath) {
+    List<Map<String, String>> data = new ArrayList<>();
 
-      public List<Map<String, String>> loadFromCSVFile(String filePath) {
-        List<Map<String, String>> data = loadCSV(filePath);
-        return data;
-      }
+    try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+      String line;
+      boolean headerSkipped = false;
+      List<String> headers = new ArrayList<>();
 
-      public static List<Map<String, String>> loadCSV(String filePath) {
-      List<Map<String, String>> data = new ArrayList<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-          String line;
-          boolean headerSkipped = false;
-          List<String> headers = new ArrayList<>();
-
-          while ((line = br.readLine()) != null) {
-            if (!headerSkipped) {
-              headers.addAll(List.of(line.split(",")));
-              headerSkipped = true;
-              continue;
-            }
-
-            String[] values = line.split(",");
-            if (values.length > 0) {
-              Map<String, String> row = new HashMap<>();
-              for (int i = 0; i < Math.min(headers.size(), values.length); i++) {
-                row.put(headers.get(i), values[i].trim());
-              }
-              data.add(row);
-            }
-          }
-        } catch (IOException e) {
-          e.printStackTrace();
+      while ((line = br.readLine()) != null) {
+        if (!headerSkipped) {
+          headers.addAll(List.of(line.split(",")));
+          headerSkipped = true;
+          continue;
         }
 
-        return data;
-      }
-
-      public void loadData(Map<String, String> output) {
-        for (String key : output.keySet()) {
-          String value = this.loadFromEnvVariables(key);
-          if (value != null) {
-            output.put(key, value);
+        String[] values = line.split(",");
+        if (values.length > 0) {
+          Map<String, String> row = new HashMap<>();
+          for (int i = 0; i < Math.min(headers.size(), values.length); i++) {
+            row.put(headers.get(i), values[i].trim());
           }
-          value = this.loadFromPropertiesFile(key);
-          if (value != null) {
-            output.put(key, value);
-          }
+          data.add(row);
         }
       }
-
-      public String[] getEnvVariableList(String csvFileName) {
-        String[] envVars = { "BASE_URL", "API_KEY" };
-        try (BufferedReader reader = new BufferedReader(new FileReader(csvFileName))) {
-          String headerLine = reader.readLine();
-          String[] csvHeaders = headerLine.split(",");
-          String[] finalEnvArray = Arrays.copyOfRange(envVars, 0, envVars.length + csvHeaders.length);
-          System.arraycopy(csvHeaders, 0, finalEnvArray, envVars.length, csvHeaders.length);
-          return finalEnvArray;
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-        return envVars;
-      }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
 
+    return data;
+  }
+
+  public void loadData(Map<String, String> output) {
+    for (String key : output.keySet()) {
+      String value = this.loadFromEnvVariables(key);
+      if (value != null) {
+        output.put(key, value);
+      }
+      value = this.loadFromPropertiesFile(key);
+      if (value != null) {
+        output.put(key, value);
+      }
+    }
+  }
+
+  public String[] getEnvVariableList(String csvFileName) {
+    String[] envVars = { "BASE_URL", "API_KEY" };
+    try (BufferedReader reader = new BufferedReader(new FileReader(csvFileName))) {
+      String headerLine = reader.readLine();
+      String[] csvHeaders = headerLine.split(",");
+
+      String[] finalEnvArray = new String[csvHeaders.length + envVars.length];
+      for (int i = 0; i < envVars.length; i++) {
+        finalEnvArray[i] = envVars[i];
+      }
+
+      for (int i = 0; i < csvHeaders.length; i++) {
+        finalEnvArray[envVars.length + i] = csvHeaders[i];
+      }
+      System.out.println(finalEnvArray);
+      return finalEnvArray;
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return envVars;
+  }
+}
