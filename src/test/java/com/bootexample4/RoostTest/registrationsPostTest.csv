@@ -1,0 +1,11 @@
+id,reference,startDate,endDate,credentialUrl,statusCode
+3e5b7269-a9c4-4b7e-973a-287a1c5a2b3e,Ref1,2021-01-01,2021-12-31,http://example.com/1,201
+b3f6ee20-b2ee-41b2-b9d2-4060b48b3392,Ref2,2021-02-01,2021-12-31,http://example.com/2,400
+9a1d2dae-0b19-4c2d-b2e1-1c129c7d0b2a,Ref3,2021-03-01,2021-12-31,http://example.com/3,401
+c8b5b6a4-3c4d-4e12-b4f5-6dfb4a63f473,Ref4,2021-04-01,2021-12-31,http://example.com/4,201
+7b3d2dae-5f19-7c4d-b2e1-7c12dc7d0b2a,Ref5,2021-05-01,2021-12-31,http://example.com/5,400
+5c3c2d2e-4d19-5c1d-b1e5-4c42dc4d0b4a,Ref6,2021-06-01,2021-12-31,http://example.com/6,401
+2a3d2d2e-2b19-2c2d-b2e2-2c12dc2d0b2a,Ref7,2021-07-01,2021-12-31,http://example.com/7,201
+1b3d2d2e-1b19-1c1d-b1e1-1c11dc1d0b1a,Ref8,2021-08-01,2021-12-31,http://example.com/8,400
+0a3d2d2e-0a19-0c0d-b0e0-0c10dc0d0b0a,Ref9,2021-09-01,2021-12-31,http://example.com/9,401
+9a3d2d2e-9b19-9c9d-b9e9-9c19dc9d0b9a,Ref10,2021-10-01,2021-12-31,http://example.com/10,201

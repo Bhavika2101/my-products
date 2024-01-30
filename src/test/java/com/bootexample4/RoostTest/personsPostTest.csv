@@ -1,0 +1,11 @@
+initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+JTK,John,Thomas,Kennedy,1980-07-15,New York,1234567890,john.kennedy@test.com,10021,10,A,US,REF01,201
+MAD,Mary,Ann,Doe,1982-12-20,Los Angeles,2345678901,mary.doe@test.com,90001,20,B,US,REF02,201
+AJB,Alan,James,Brown,1978-05-10,Chicago,3456789012,alan.brown@test.com,60616,30,C,US,REF03,201
+LPC,Linda,Patricia,Clark,1985-03-25,Houston,4567890123,linda.clark@test.com,77001,40,D,US,REF04,201
+RER,Robert,Edward,Rodriguez,1975-11-30,Phoenix,5678901234,robert.rodriguez@test.com,85001,50,E,US,REF05,201
+KML,Karen,Marie,Lee,1988-09-15,Philadelphia,6789012345,karen.lee@test.com,19104,60,F,US,REF06,201
+TMJ,Thomas,Michael,Jones,1970-07-20,San Antonio,7890123456,thomas.jones@test.com,78205,70,G,US,REF07,201
+SAD,Susan,Ann,Davis,1972-05-05,Dallas,8901234567,susan.davis@test.com,75201,80,H,US,REF08,201
+JMW,Joseph,Mark,White,1979-02-15,San Jose,9012345678,joseph.white@test.com,95113,90,I,US,REF09,201
+PRT,Patricia,Rose,Taylor,1983-10-10,San Diego,0123456789,patricia.taylor@test.com,92101,100,J,US,REF10,201

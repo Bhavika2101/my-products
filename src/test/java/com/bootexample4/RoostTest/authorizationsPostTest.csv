@@ -1,0 +1,11 @@
+email,statusCode
+john.doe@gmail.com,201
+jane.doe@hotmail.com,400
+bob.smith@yahoo.com,401
+alice.johnson@outlook.com,201
+charlie.brown@gmail.com,400
+snoopy.dog@yahoo.com,401
+lucy.vanpelt@hotmail.com,201
+linus.vanpelt@outlook.com,400
+peppermint.patty@gmail.com,401
+marcie.brown@yahoo.com,201
