@@ -1,0 +1,11 @@
+email,statusCode
+john.doe@gmail.com,201
+jane.doe@hotmail.com,400
+bob.smith@yahoo.com,401
+alice.johnson@outlook.com,201
+charlie.brown@gmail.com,400
+susan.richards@yahoo.com,401
+peter.parker@hotmail.com,201
+mary.jane@outlook.com,400
+tony.stark@gmail.com,401
+steve.rogers@yahoo.com,201
