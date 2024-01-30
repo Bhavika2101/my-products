@@ -1,0 +1,483 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Refund Message Exchange API",
+    "description": "This document contains data model to be exchanged as per ICD",
+    "license": {
+      "name": "American Airlines",
+      "url": "http://aa.com"
+    },
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://app.swaggerhub.com/apis/IT-Financial-Systems/refund-message_exchange_api/v1.0.0",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/icd/s2s/exchange/refundMessage": {
+      "post": {
+        "tags": [
+          "icd-controller"
+        ],
+        "operationId": "submitRefundToARA",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundMessage"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundMessage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AugmentationPoint": {
+        "type": "object",
+        "properties": {
+          "augmentationKey": {
+            "type": "string",
+            "description": "augmentation property name",
+            "example": "refund-type"
+          },
+          "augmentationValue": {
+            "type": "string",
+            "description": "augmentation property value",
+            "example": "reversal"
+          }
+        },
+        "description": "Augmentation within the messages are undefined elements which allow any Implementer to add any structure within the message for any defined purpose"
+      },
+      "CardDetails": {
+        "required": [
+          "maskedCardNumber",
+          "vendorCode"
+        ],
+        "type": "object",
+        "properties": {
+          "maskedCardNumber": {
+            "type": "string",
+            "description": "maskedCardNumber when FOP Type is CC",
+            "example": "388475XXXXXX0055"
+          },
+          "vendorCode": {
+            "type": "string",
+            "description": "Card Vendor code when FOP Type is CC",
+            "example": "MC"
+          },
+          "binNumber": {
+            "maxLength": 6,
+            "minLength": 6,
+            "type": "string",
+            "description": "First 6 of the card number",
+            "example": "388475"
+          },
+          "lastFour": {
+            "maxLength": 4,
+            "minLength": 4,
+            "type": "string",
+            "description": "Last 4 of the card number",
+            "example": "0055"
+          }
+        },
+        "description": "If FOP is CC"
+      },
+      "FormOfPayment": {
+        "required": [
+          "fopType"
+        ],
+        "type": "object",
+        "properties": {
+          "fopType": {
+            "type": "string",
+            "description": "FOPType can be only CC for Credit Card, CK for Check and ET for Exchanges",
+            "example": "CC",
+            "enum": [
+              "CC",
+              "CK",
+              "ET"
+            ]
+          },
+          "amount": {
+            "$ref": "#/components/schemas/StandardAmount"
+          },
+          "refundedCardDetails": {
+            "$ref": "#/components/schemas/CardDetails"
+          }
+        }
+      },
+      "MessageContext": {
+        "type": "object",
+        "properties": {
+          "messageContentType": {
+            "type": "string",
+            "description": "Indicates the format of message payload.",
+            "example": "application/json"
+          },
+          "messageContentEncoding": {
+            "type": "string",
+            "description": "Indicates the content encoding of message payload.",
+            "example": "base64"
+          },
+          "payloadHashValue": {
+            "type": "string",
+            "description": "Indicates the hash value of the below payload",
+            "example": "34cde10d0257d4a8c096c462c3712ed936ce5b00b5ac28cb47c57992db356814"
+          },
+          "hashingAlgorithm": {
+            "type": "string",
+            "description": "Indicates hashing algorithm",
+            "example": "SHA-256"
+          }
+        },
+        "description": "Captures Message transport and accuracy information"
+      },
+      "MessageHeader": {
+        "required": [
+          "headerVersion",
+          "messageContext",
+          "sourceContext",
+          "timestamp"
+        ],
+        "type": "object",
+        "properties": {
+          "headerVersion": {
+            "type": "string",
+            "description": "The Universal MessageHeaderType version. Version should be check by processing nodes to ensure compatability. [Major_Version.Minor_Version]",
+            "example": "1.0"
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "ISO Data Time Format",
+            "example": "2023-11-30T01:30:00.000-05:00"
+          },
+          "sourceContext": {
+            "$ref": "#/components/schemas/SourceContext"
+          },
+          "messageContext": {
+            "$ref": "#/components/schemas/MessageContext"
+          },
+          "multiPartMessageContextTypes": {
+            "type": "array",
+            "description": "Meta information providing context about a multi part message exchange.",
+            "items": {
+              "$ref": "#/components/schemas/MultiPartMessageContextType"
+            }
+          }
+        },
+        "description": "Message Header capture details of the source of message"
+      },
+      "MonetaryInformation": {
+        "type": "object",
+        "properties": {
+          "refundedFormOfPayment": {
+            "type": "array",
+            "description": "Payment details are not required for Reservals",
+            "items": {
+              "$ref": "#/components/schemas/FormOfPayment"
+            }
+          },
+          "refundedFare": {
+            "$ref": "#/components/schemas/StandardAmount"
+          },
+          "refundFee_CancellationPenality": {
+            "$ref": "#/components/schemas/StandardAmount"
+          },
+          "refundFee_TaxOnCancellationPenality": {
+            "$ref": "#/components/schemas/TaxAmount"
+          },
+          "refundedFee": {
+            "$ref": "#/components/schemas/StandardAmount"
+          },
+          "refundedTax": {
+            "$ref": "#/components/schemas/TaxAmount"
+          }
+        },
+        "description": "Payment details are only not required for Reserval or updates",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/StandardAmount"
+          },
+          {
+            "$ref": "#/components/schemas/TaxAmount"
+          },
+          {
+            "$ref": "#/components/schemas/FormOfPayment"
+          }
+        ]
+      },
+      "MultiPartMessageContextType": {
+        "type": "object",
+        "properties": {
+          "messageCorrelationContext": {
+            "type": "string",
+            "description": "Used to name the correlation usage",
+            "example": "paymentFOPSplit"
+          },
+          "messageCorrelationId": {
+            "type": "string",
+            "description": "transactionID of the correlation system. Can be payment split trans id",
+            "example": "52526ecf-e0d4-49ea-93ac-518a03881e7c"
+          },
+          "messageSequenceNumber": {
+            "type": "string",
+            "description": "Used to sequence a group of messages in messageSequenceSize",
+            "example": "1"
+          },
+          "messageSequenceSize": {
+            "type": "string",
+            "description": "The number of messages within a group of correlated messages",
+            "example": "2"
+          }
+        },
+        "description": "Meta information providing context about a multi part message exchange."
+      },
+      "Payload": {
+        "required": [
+          "refundTransactions",
+          "refundingAgentDetails"
+        ],
+        "type": "object",
+        "properties": {
+          "refundTransactions": {
+            "$ref": "#/components/schemas/RefundTransaction"
+          },
+          "refundingAgentDetails": {
+            "$ref": "#/components/schemas/RefundingAgentDetails"
+          },
+          "monetaryInformation": {
+            "$ref": "#/components/schemas/MonetaryInformation"
+          }
+        }
+      },
+      "RefundMessage": {
+        "required": [
+          "messageHeader"
+        ],
+        "type": "object",
+        "properties": {
+          "messageHeader": {
+            "$ref": "#/components/schemas/MessageHeader"
+          },
+          "augmentationPoint": {
+            "type": "array",
+            "description": "Augmentation within the messages are undefined elements which allow any Implementer to add any structure within the message for any defined purpose",
+            "items": {
+              "$ref": "#/components/schemas/AugmentationPoint"
+            }
+          },
+          "payload": {
+            "$ref": "#/components/schemas/Payload"
+          }
+        }
+      },
+      "RefundTransaction": {
+        "required": [
+          "documentNumber",
+          "issuanceDate",
+          "refundIndicator",
+          "refundUID",
+          "refundedCoupons"
+        ],
+        "type": "object",
+        "properties": {
+          "remark": {
+            "maxLength": 3999,
+            "type": "string",
+            "description": "Message Header capture details of the source of message",
+            "example": "This is a standard remark"
+          },
+          "documentNumber": {
+            "pattern": "^[0][0][1][0-9]{10}$",
+            "type": "string",
+            "description": "Ticket Number must start with 001 and be 13 digits long with no alpha characters",
+            "example": "0018387758653"
+          },
+          "refundedCoupons": {
+            "type": "array",
+            "example": [
+              "1",
+              "2",
+              "4",
+              "6"
+            ],
+            "items": {
+              "pattern": "^(?:ALL|DOC|\\d\\d|\\d)$",
+              "type": "string",
+              "example": "[\"1\",\"2\",\"4\",\"6\"]"
+            }
+          },
+          "issuanceDate": {
+            "type": "string",
+            "description": "Date of Document issuance in MM/DD/YYYY",
+            "example": "01/23/2024"
+          },
+          "refundIndicator": {
+            "type": "string",
+            "description": "Type of Refund",
+            "example": "CB-FRAUD"
+          },
+          "refundUID": {
+            "type": "string",
+            "description": "Refund Unique Identifier generated by Refunds Application",
+            "example": "71560a14-5511-4dd0-99e8-fd9ab49060c8"
+          },
+          "relatedRefundUID": {
+            "type": "string",
+            "description": "Refund Unique Identifier of the transaction that needs to be reserved",
+            "example": "e5a79bb8-94fb-4a07-b2e4-747781c29d6d"
+          },
+          "oadCode": {
+            "type": "string",
+            "description": "Other Airline Document Code, used mainly for interline transaction",
+            "example": "125"
+          }
+        },
+        "description": "Holds Refund Transaction Details"
+      },
+      "RefundingAgentDetails": {
+        "required": [
+          "areaPointOfSale",
+          "cityPointOfSale",
+          "countryPointOfSale",
+          "issuerSystem"
+        ],
+        "type": "object",
+        "properties": {
+          "cityPointOfSale": {
+            "maxLength": 3,
+            "minLength": 3,
+            "type": "string",
+            "description": "City of the POS",
+            "example": "QSV",
+            "default": "QSV"
+          },
+          "areaPointOfSale": {
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string",
+            "description": "State or Area of the POS",
+            "example": "AZ",
+            "default": "AZ"
+          },
+          "countryPointOfSale": {
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string",
+            "description": "Country of the POS",
+            "example": "US",
+            "default": "US"
+          },
+          "issuerSystem": {
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string",
+            "description": "Agent Issuer System",
+            "example": "AA",
+            "default": "AA"
+          }
+        },
+        "description": "Holds Agent Details"
+      },
+      "SourceContext": {
+        "required": [
+          "applicationId",
+          "sourceId",
+          "transactionId"
+        ],
+        "type": "object",
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "description": "Meta information providing context about the client of this message. A client context represents the absolute originator of a distributed business transaction (e.g. sales channel in context of payment services transaction processing.",
+            "example": "Refunds-Prod"
+          },
+          "applicationId": {
+            "type": "string",
+            "description": "Provides the information about the application that created the message. Archer ID is preferred",
+            "example": "RefundSvcs"
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "Transaction ID of the source application",
+            "example": "1a56967f-06fb-4281-93a7-3459ba0d6fc4"
+          }
+        },
+        "description": "Captures Source context and transaction information"
+      },
+      "StandardAmount": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Amount with decimal values as applicable",
+            "format": "double",
+            "example": 20.05
+          },
+          "currency": {
+            "type": "string",
+            "description": "Currency code",
+            "example": "USD"
+          }
+        }
+      },
+      "TaxAmount": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Amount with decimal values as applicable",
+            "format": "double",
+            "example": 20.05
+          },
+          "currency": {
+            "type": "string",
+            "description": "Currency code",
+            "example": "USD"
+          },
+          "taxISOCode": {
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string",
+            "description": "ISO Tax Code",
+            "example": "OB"
+          },
+          "taxCityCode": {
+            "maxLength": 3,
+            "minLength": 2,
+            "type": "string",
+            "description": "Tax 2 or 3 chars City Code",
+            "example": "NY"
+          }
+        }
+      }
+    }
+  }
+}
