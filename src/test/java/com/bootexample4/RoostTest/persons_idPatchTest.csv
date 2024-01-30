@@ -1,0 +1,11 @@
+id,initials,firstName,middleName,lastName,birthDate,birthPlace,phone,email,postalCode,houseNumber,houseNumberPostfix,countryCode,reference,statusCode
+4b22c8ec-abc8-4a13-a399-3b0d09a2bd6e,AB,Alice,Beth,Smith,1980-05-12,London,+447712345678,alice.smith@gmail.com,SW1A1AA,12,A,GB,REF123456,200
+9f22b5ff-abc8-4a13-a399-3b0d09a2bd7e,CD,Charles,David,Johnson,1975-12-10,New York,+12125551234,charles.johnson@gmail.com,10001,34,B,US,REF234567,200
+5a22f6ec-aac8-7a13-a399-3b8d19a2bd8e,EF,Emma,Ford,Brown,1990-03-15,Paris,+33123456789,emma.brown@gmail.com,75001,56,C,FR,REF345678,200
+7b22g7ec-abc8-8a13-a399-3b0d29a2bd9e,GH,George,Henry,Jones,1985-07-20,Berlin,+491712345678,george.jones@gmail.com,10115,78,D,DE,REF456789,200
+8c22h8ec-abc8-9a13-a399-3b0d39a2bd10e,IJ,Irene,Jane,Miller,1978-11-25,Madrid,+34123456789,irene.miller@gmail.com,28001,90,E,ES,REF567890,200
+2d22i9ec-abc8-0a13-a399-3b0d49a2bd11e,KL,Kevin,Liam,Davis,1982-09-30,Rome,+39123456789,kevin.davis@gmail.com,00118,102,F,IT,REF678901,200
+3e22j0ec-abc8-1a13-a399-3b0d59a2bd12e,MN,Mary,Nancy,Garcia,1987-04-05,Amsterdam,+31123456789,mary.garcia@gmail.com,1011AA,114,G,NL,REF789012,200
+6f22k1ec-abc8-2a13-a399-3b0d69a2bd13e,OP,Oliver,Peter,Rodriguez,1979-08-15,Brussels,+32123456789,oliver.rodriguez@gmail.com,1000,126,H,BE,REF890123,200
+1g22l2ec-abc8-3a13-a399-3b0d79a2bd14e,QR,Quincy,Rachel,Martinez,1983-02-20,Vienna,+43123456789,quincy.martinez@gmail.com,1010,138,I,AT,REF901234,200
+0h22m3ec-abc8-4a13-a399-3b0d89a2bd15e,ST,Steven,Tom,Hernandez,1986-06-25,Stockholm,+46123456789,steven.hernandez@gmail.com,11121,150,J,SE,REF012345,200

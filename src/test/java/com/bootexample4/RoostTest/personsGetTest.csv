@@ -1,0 +1,11 @@
+size,offset,name,birth-date,statusCode
+20,0,John Doe,1980-01-01,200
+30,1,Jane Doe,1985-05-05,200
+15,2,James Smith,1990-10-10,401
+25,3,Linda Johnson,1975-04-15,200
+10,4,Michael Brown,1988-02-20,400
+40,5,Emily Davis,1992-07-30,401
+50,6,Robert Miller,1983-11-25,200
+35,7,Mary Wilson,1995-03-08,400
+45,8,William Moore,1978-06-12,200
+5,9,Patricia Taylor,1987-09-17,401
