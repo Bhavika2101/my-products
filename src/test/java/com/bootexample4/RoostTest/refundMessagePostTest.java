@@ -11,6 +11,7 @@ RoostTestHash=19003958c4
 
 // ********RoostGPT********
 package com.bootexample4.RoostTest;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -22,6 +23,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -32,55 +34,41 @@ import org.slf4j.LoggerFactory;
 
 public class refundMessagePostTest {
 
-    Map<String, String> envs = new HashMap<>();
+  List<Map<String, String>> envList = new ArrayList<>();
 
+  @Before
+  public void setUp() {
+    Testdataloader envData = new Testdataloader();
+    envList = envData
+        .loadData("src" + File.separator + "test" + File.separator + "java" + File.separator + "com" + File.separator
+            + "bootexample4" + File.separator + "RoostTest" + File.separator + "refundMessagePostTest.csv");
+    System.out.println(envList);
+  }
 
-    @Before
-    public void setUp() {
-      Dataloader envData = new Dataloader();
-      String[] envVariableList = envData.getEnvVariableList("src" + File.separator + "test" + File.separator + "java" + File.separator + "com" + File.separator + "bootexample4" + File.separator + "RoostTest" + File.separator + "refundMessagePostTest.csv");
+  @Test
+  public void refundMessagePost_Test() {
+    this.setUp();
 
-      for (String envVar : envVariableList) {
-        envs.put(envVar, "");
+    for (Map<String, String> map : envList) {
+      RestAssured.baseURI = map.get("BASE_URL");
+
+      Response response = given()
+          .contentType(ContentType.JSON)
+          .body("{\n" +
+              " \"messageHeader\": \"" + (map.get("messageHeader") != null ? map.get("messageHeader") : "") + "\",\n" +
+              " \"augmentationPoint\": \"" + (map.get("augmentationPoint") != null ? map.get("augmentationPoint") : "")
+              + "\",\n" +
+              " \"payload\": \"" + (map.get("payload") != null ? map.get("payload") : "") +
+              "\n" +
+              "}")
+          .when()
+          .post("/icd/s2s/exchange/refundMessage")
+          .then()
+          .extract().response();
+
+      if (response.statusCode() == 200) {
+        System.out.println("Description: OK");
       }
-      envData.loadData(envs);
     }
-
-
-    
-    @Test  
-    public void refundMessagePost_Test() {
-        this.setUp();
-        Dataloader csvData = new Dataloader();
-        List<Map<String, String>> envVarsCSV = csvData.loadFromCSVFile("src" + File.separator + "test" + File.separator + "java" + File.separator + "com" + File.separator + "bootexample4" + File.separator + "RoostTest" + File.separator + "refundMessagePostTest.csv");
-        Map<String, String> map = new HashMap<>();
-        for (Map<String, String> row : envVarsCSV) {
-          map.putAll(envs);
-          for (Map.Entry<String, String> entry : row.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            if (!value.equals("")) {
-              map.put(key, value);
-            }
-          }  
-          RestAssured.baseURI = map.get("BASE_URL");  
-  
-                Response response = given()
-				.contentType(ContentType.JSON)
-				.body("{\n"+
-					"  \"messageHeader\": \"" + (map.get("messageHeader") != null ? map.get("messageHeader") : "") + "\",\n" +
-					"  \"augmentationPoint\": \"" + (map.get("augmentationPoint") != null ? map.get("augmentationPoint") : "") + "\",\n" +
-					"  \"payload\": \"" + (map.get("payload") != null ? map.get("payload") : "") + "\n" +
- 				"}")
-                .when()
-                .post("/icd/s2s/exchange/refundMessage")  
-                .then() 
-                .extract().response();    
-         
-                if (response.statusCode() == 200) {
-					System.out.println("Description: OK");
-				}
-  
-            }  
-    }
+  }
 }
