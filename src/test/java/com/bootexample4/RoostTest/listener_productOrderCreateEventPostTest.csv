@@ -1,0 +1,11 @@
+notification^|^date^|^customer^|^subscriberId^|^order^|^id^|^correlationOrder^|^associatedDocument^|^issue^|^type^|^code^|^description^|^lostEquipment^|^resource^|^AdditionalCSVvaluInfo^|^statusCode
+Notification1^|^2021-06-05T20:23:29-03:00^|^Customer1^|^SUB001^|^Order1^|^ID001^|^COR001^|^DOC001^|^Issue1^|^Type1^|^-1^|^Description1^|^True^|^Resource1^|^20230315000001^|^204
+Notification2^|^2021-06-06T20:23:29-03:00^|^Customer2^|^SUB002^|^Order2^|^ID002^|^COR002^|^DOC002^|^Issue2^|^Type2^|^0^|^Description2^|^False^|^Resource2^|^20230315000002^|^400
+Notification3^|^2021-06-07T20:23:29-03:00^|^Customer3^|^SUB003^|^Order3^|^ID003^|^COR003^|^DOC003^|^Issue3^|^Type3^|^1^|^Description3^|^True^|^Resource3^|^20230315000003^|^401
+Notification4^|^2021-06-08T20:23:29-03:00^|^Customer4^|^SUB004^|^Order4^|^ID004^|^COR004^|^DOC004^|^Issue4^|^Type4^|^2^|^Description4^|^False^|^Resource4^|^20230315000004^|^500
+Notification5^|^2021-06-09T20:23:29-03:00^|^Customer5^|^SUB005^|^Order5^|^ID005^|^COR005^|^DOC005^|^Issue5^|^Type5^|^3^|^Description5^|^True^|^Resource5^|^20230315000005^|^503
+Notification6^|^2021-06-10T20:23:29-03:00^|^Customer6^|^SUB006^|^Order6^|^ID006^|^COR006^|^DOC006^|^Issue6^|^Type6^|^4^|^Description6^|^False^|^Resource6^|^20230315000006^|^504
+Notification7^|^2021-06-11T20:23:29-03:00^|^Customer7^|^SUB007^|^Order7^|^ID007^|^COR007^|^DOC007^|^Issue7^|^Type7^|^-1^|^Description7^|^True^|^Resource7^|^20230315000007^|^204
+Notification8^|^2021-06-12T20:23:29-03:00^|^Customer8^|^SUB008^|^Order8^|^ID008^|^COR008^|^DOC008^|^Issue8^|^Type8^|^0^|^Description8^|^False^|^Resource8^|^20230315000008^|^400
+Notification9^|^2021-06-13T20:23:29-03:00^|^Customer9^|^SUB009^|^Order9^|^ID009^|^COR009^|^DOC009^|^Issue9^|^Type9^|^1^|^Description9^|^True^|^Resource9^|^20230315000009^|^401
+Notification10^|^2021-06-14T20:23:29-03:00^|^Customer10^|^SUB010^|^Order10^|^ID010^|^COR010^|^DOC010^|^Issue10^|^Type10^|^2^|^Description10^|^False^|^Resource10^|^20230315000010^|^500
