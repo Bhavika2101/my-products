@@ -1,0 +1,20 @@
+order^|^AdditionalCSVvaluInfo^|^statusCode
+1^|^Installation Order Type FTTH^|^201
+2^|^Installation Order Type FTTP^|^201
+3^|^Installation Order Type FTTH with partial viability^|^201
+4^|^Installation Order Type FTTH arising from a address change (flagged address change)^|^201
+5^|^Installation Order Type FTTP arising from a address change (flagged address change)^|^201
+6^|^Removal Order Type FTTH arising from a address change (flagged address change)^|^201
+7^|^Removal Order Type FTTP arising from a address change (flagged address change)^|^201
+8^|^Removal Order Type FTTH^|^201
+9^|^Removal Order Type FTTP^|^201
+10^|^Total Block Order Type FTTH^|^201
+11^|^Total Block Order Type FTTP^|^201
+12^|^Partial Block Order Type FTTH^|^201
+13^|^Partial Block Order Type FTTP^|^201
+14^|^Unblock Order Type FTTH^|^201
+15^|^Unblock Order Type FTTP^|^201
+16^|^Associate CPE Order Type FTTP^|^201
+17^|^Speed Modification Order Type FTTH^|^201
+18^|^Speed Modification Order Type FTTP^|^201
+19^|^Point Relocation Order Type FTTH^|^201
