@@ -1,0 +1,11 @@
+notification^|^date^|^customer^|^subscriberId^|^order^|^id^|^correlationOrder^|^associatedDocument^|^issue^|^type^|^code^|^description^|^lostEquipment^|^resource^|^AdditionalCSVvaluInfo^|^statusCode
+Notification1^|^2022-07-01^|^Customer1^|^ABC123^|^Order1^|^ID123^|^Correlation1^|^Doc1^|^Issue1^|^Type1^|^-1^|^Description1^|^True^|^Resource1^|^Closing Notification^|^204
+Notification2^|^2022-07-02^|^Customer2^|^DEF456^|^Order2^|^ID456^|^Correlation2^|^Doc2^|^Issue2^|^Type2^|^0^|^Description2^|^False^|^Resource2^|^Cancel Notification^|^400
+Notification3^|^2022-07-03^|^Customer3^|^GHI789^|^Order3^|^ID789^|^Correlation3^|^Doc3^|^Issue3^|^Type3^|^1^|^Description3^|^True^|^Resource3^|^ONT already in use^|^401
+Notification4^|^2022-07-04^|^Customer4^|^JKL012^|^Order4^|^ID012^|^Correlation4^|^Doc4^|^Issue4^|^Type4^|^2^|^Description4^|^False^|^Resource4^|^Closing Notification (ontOwner Vtal - Install)^|^500
+Notification5^|^2022-07-05^|^Customer5^|^MNO345^|^Order5^|^ID345^|^Correlation5^|^Doc5^|^Issue5^|^Type5^|^3^|^Description5^|^True^|^Resource5^|^Closing Notification^|^503
+Notification6^|^2022-07-06^|^Customer6^|^PQR678^|^Order6^|^ID678^|^Correlation6^|^Doc6^|^Issue6^|^Type6^|^4^|^Description6^|^False^|^Resource6^|^Cancel Notification^|^504
+Notification7^|^2022-07-07^|^Customer7^|^STU901^|^Order7^|^ID901^|^Correlation7^|^Doc7^|^Issue7^|^Type7^|^-1^|^Description7^|^True^|^Resource7^|^ONT already in use^|^204
+Notification8^|^2022-07-08^|^Customer8^|^VWX234^|^Order8^|^ID234^|^Correlation8^|^Doc8^|^Issue8^|^Type8^|^0^|^Description8^|^False^|^Resource8^|^Closing Notification (ontOwner Vtal - Install)^|^400
+Notification9^|^2022-07-09^|^Customer9^|^YZA567^|^Order9^|^ID567^|^Correlation9^|^Doc9^|^Issue9^|^Type9^|^1^|^Description9^|^True^|^Resource9^|^Closing Notification^|^401
+Notification10^|^2022-07-10^|^Customer10^|^BCD890^|^Order10^|^ID890^|^Correlation10^|^Doc10^|^Issue10^|^Type10^|^2^|^Description10^|^False^|^Resource10^|^Cancel Notification^|^500

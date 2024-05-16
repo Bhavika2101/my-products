@@ -1,0 +1,11 @@
+order.Id^|^AdditionalCSVvaluInfo^|^order^|^associatedDocument^|^customer^|^subscriberId^|^statusCode
+ORD001^|^AdditionalInfo1^|^Order1^|^DOC001^|^Customer1^|^SUB001^|^200
+ORD002^|^AdditionalInfo2^|^Order2^|^DOC002^|^Customer2^|^SUB002^|^400
+ORD003^|^AdditionalInfo3^|^Order3^|^DOC003^|^Customer3^|^SUB003^|^401
+ORD004^|^AdditionalInfo4^|^Order4^|^DOC004^|^Customer4^|^SUB004^|^403
+ORD005^|^AdditionalInfo5^|^Order5^|^DOC005^|^Customer5^|^SUB005^|^404
+ORD006^|^AdditionalInfo6^|^Order6^|^DOC006^|^Customer6^|^SUB006^|^406
+ORD007^|^AdditionalInfo7^|^Order7^|^DOC007^|^Customer7^|^SUB007^|^423
+ORD008^|^AdditionalInfo8^|^Order8^|^DOC008^|^Customer8^|^SUB008^|^429
+ORD009^|^AdditionalInfo9^|^Order9^|^DOC009^|^Customer9^|^SUB009^|^500
+ORD010^|^AdditionalInfo10^|^Order10^|^DOC010^|^Customer10^|^SUB010^|^503
