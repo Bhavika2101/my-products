@@ -1,0 +1,11 @@
+notification^|^date^|^customer^|^subscriberId^|^order^|^id^|^correlationOrder^|^associatedDocument^|^issue^|^type^|^code^|^description^|^lostEquipment^|^resource^|^AdditionalCSVvaluInfo^|^statusCode
+notification1^|^2022-03-01T12:00:00-03:00^|^customer1^|^subId1^|^order1^|^id1^|^corrOrder1^|^doc1^|^issue1^|^type1^|^-1^|^description1^|^True^|^resource1^|^additionalInfo1^|^204
+notification2^|^2022-03-02T12:00:00-03:00^|^customer2^|^subId2^|^order2^|^id2^|^corrOrder2^|^doc2^|^issue2^|^type2^|^0^|^description2^|^False^|^resource2^|^additionalInfo2^|^400
+notification3^|^2022-03-03T12:00:00-03:00^|^customer3^|^subId3^|^order3^|^id3^|^corrOrder3^|^doc3^|^issue3^|^type3^|^1^|^description3^|^True^|^resource3^|^additionalInfo3^|^401
+notification4^|^2022-03-04T12:00:00-03:00^|^customer4^|^subId4^|^order4^|^id4^|^corrOrder4^|^doc4^|^issue4^|^type4^|^2^|^description4^|^False^|^resource4^|^additionalInfo4^|^500
+notification5^|^2022-03-05T12:00:00-03:00^|^customer5^|^subId5^|^order5^|^id5^|^corrOrder5^|^doc5^|^issue5^|^type5^|^3^|^description5^|^True^|^resource5^|^additionalInfo5^|^503
+notification6^|^2022-03-06T12:00:00-03:00^|^customer6^|^subId6^|^order6^|^id6^|^corrOrder6^|^doc6^|^issue6^|^type6^|^4^|^description6^|^False^|^resource6^|^additionalInfo6^|^504
+notification7^|^2022-03-07T12:00:00-03:00^|^customer7^|^subId7^|^order7^|^id7^|^corrOrder7^|^doc7^|^issue7^|^type7^|^-1^|^description7^|^True^|^resource7^|^additionalInfo7^|^204
+notification8^|^2022-03-08T12:00:00-03:00^|^customer8^|^subId8^|^order8^|^id8^|^corrOrder8^|^doc8^|^issue8^|^type8^|^0^|^description8^|^False^|^resource8^|^additionalInfo8^|^400
+notification9^|^2022-03-09T12:00:00-03:00^|^customer9^|^subId9^|^order9^|^id9^|^corrOrder9^|^doc9^|^issue9^|^type9^|^1^|^description9^|^True^|^resource9^|^additionalInfo9^|^401
+notification10^|^2022-03-10T12:00:00-03:00^|^customer10^|^subId10^|^order10^|^id10^|^corrOrder10^|^doc10^|^issue10^|^type10^|^2^|^description10^|^False^|^resource10^|^additionalInfo10^|^500
