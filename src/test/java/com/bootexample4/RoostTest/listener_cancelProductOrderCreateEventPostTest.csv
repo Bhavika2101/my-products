@@ -1,0 +1,11 @@
+requestBody^|^statusCode
+{"notification": {"order": {"associatedDocument": "VTT001", "id": "20230315000001"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT002", "id": "20230315000002"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT003", "id": "20230315000003"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT004", "id": "20230315000004"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT005", "id": "20230315000005"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT006", "id": "20230315000006"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT007", "id": "20230315000007"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT008", "id": "20230315000008"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT009", "id": "20230315000009"}}}^|^204
+{"notification": {"order": {"associatedDocument": "VTT010", "id": "20230315000010"}}}^|^204
